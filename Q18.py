@@ -23,9 +23,8 @@ input_tri[14][0:15]=[4,62,98,27,23,9,70,98,73,93,38,53,60,4,23]
 
 max_path_sum[14]=input_tri[14]
 for i in range(13,0,-1):
-
-    max_path_sum[i][0]=max_path_sum[i+1][0]+input_tri[i][0]
-    for j in range(1,i+1):
+    # max_path_sum[i][0]=max_path_sum[i+1][0]+input_tri[i][0]
+    for j in range(0,i+1):
         max_path_sum[i][j]=+input_tri[i][j]+max(max_path_sum[i+1][j],max_path_sum[i+1][j+1])
 
 
